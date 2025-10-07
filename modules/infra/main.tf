@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 module "network" {
-  source = "./network"
+  source = "network"
 
   owner            = var.owner
   project_name     = var.project_name
@@ -24,7 +24,7 @@ module "network" {
 }
 
 module "external_alb" {
-  source = "./lb"
+  source = "lb"
 
   owner               = var.owner
   project_name        = var.project_name
@@ -37,7 +37,7 @@ module "external_alb" {
 }
 
 module "bastion" {
-  source = "./bastion"
+  source = "bastion"
 
   owner             = var.owner
   project_name      = var.project_name
